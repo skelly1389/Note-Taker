@@ -59,6 +59,8 @@ const renderActiveNote = () => {
     noteTitle.value = activeNote.title;
     noteText.value = activeNote.text;
   } else {
+    // the new note button didn't work so here is a hack that reloads the page
+    location.reload();
     noteTitle.value = '';
     noteText.value = '';
   }
