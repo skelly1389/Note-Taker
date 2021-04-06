@@ -5,7 +5,7 @@ module.exports = (app) => {
 
     app.post('/api/notes', (req, res) => {
             req.body.id = (userNotes.length+1);
-            console.log(req.body.id);
+            res.redirect('back');
             userNotes.push(req.body);
       });
 }
