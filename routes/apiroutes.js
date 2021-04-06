@@ -1,5 +1,10 @@
 const userNotes = require('../db/db');
 
 module.exports = (app) => {
-    console.log(userNotes);
+    app.get('/api/notes', (req, res) => res.json(userNotes));
+
+    // app.post('/api/notes', (req, res) => {
+    //         console.log("test");
+    //         userNotes.push(req.body);
+    //   });
 }
